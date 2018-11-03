@@ -55,7 +55,6 @@ class Index extends React.Component {
     }
 
     render() {
-        console.log("Render", this.state);
         return(
             <React.Fragment>
                 <ShortShNavbar/>

@@ -2,6 +2,7 @@
   "name": "shortsh-frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://short.sh",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "clipboard": "^2.0.1",
