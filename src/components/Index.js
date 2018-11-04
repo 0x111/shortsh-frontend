@@ -65,7 +65,7 @@ class Index extends React.Component {
                             <p>Just enter your long link and click shorten to get a short url!</p>
                             <Form onSubmit={this.handleSubmit}>
                                 <InputGroup size="lg">
-                                    <Input type={'url'} id={'url'} pattern="(https://.*|http://.*)" onChange={this.handleChange} name={"url"} value={this.state.url} placeholder="Paste a link and click shorten" required />
+                                    <Input autocomplete={"off"} type={'url'} id={'url'} pattern="(https://.*|http://.*)" onChange={this.handleChange} name={"url"} value={this.state.url} placeholder="Paste a link and click shorten" required />
                                     {this.state.shortened ? <InputGroupAddon addonType="append"><Button className={"copytocb"} data-clipboard-target="#url" color="success">Copy</Button></InputGroupAddon> : <InputGroupAddon addonType="append"><Button color="primary">Shorten</Button></InputGroupAddon>}
                                 </InputGroup>
                             </Form>
