@@ -57,7 +57,6 @@ class Index extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <ShortShNavbar/>
                 <Container style={{textAlign: "center", alignItems: "center"}}>
                     <Row className="d-flex align-items-center h-100">
                         <Col sm="12" md={{ size: 8, offset: 2 }}>
@@ -65,7 +64,7 @@ class Index extends React.Component {
                             <p>Just enter your long link and click shorten to get a short url!</p>
                             <Form onSubmit={this.handleSubmit}>
                                 <InputGroup size="lg">
-                                    <Input autocomplete={"off"} type={'url'} id={'url'} pattern="(https://.*|http://.*)" onChange={this.handleChange} name={"url"} value={this.state.url} placeholder="Paste a link and click shorten" required />
+                                    <Input autoComplete={"off"} type={'url'} id={'url'} pattern="(https://.*|http://.*)" onChange={this.handleChange} name={"url"} value={this.state.url} placeholder="Paste a link and click shorten" required />
                                     {this.state.shortened ? <InputGroupAddon addonType="append"><Button className={"copytocb"} data-clipboard-target="#url" color="success">Copy</Button></InputGroupAddon> : <InputGroupAddon addonType="append"><Button color="primary">Shorten</Button></InputGroupAddon>}
                                 </InputGroup>
                             </Form>

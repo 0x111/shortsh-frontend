@@ -1,0 +1,5 @@
+export const urlstatsConstants = {
+    URL_STAT_REQUEST: 'GET_STATS_REQUEST',
+    URL_STAT_SUCCESS: 'GET_STATS_SUCCESS',
+    URL_STAT_ERROR: 'GET_STATS_ERROR'
+};
