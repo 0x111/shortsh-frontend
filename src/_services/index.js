@@ -1,1 +1,1 @@
-export * from 'urlstats.service';
+export * from './urlstats.service';

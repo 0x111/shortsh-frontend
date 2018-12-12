@@ -6,15 +6,14 @@ export const urlStatsAction = {
 };
 
 
-// prefixed function name with underscore because delete is a reserved word in javascript
 function getByID(id) {
     return dispatch => {
         dispatch(request(id));
 
         urlStatsService.getUrlStats(id)
             .then(
-                stats => {
-                    dispatch(success(stats));
+                response => {
+                    dispatch(success(response));
                 },
                 error => {
                     dispatch(failure(id, error));
@@ -26,8 +25,8 @@ function getByID(id) {
         return {type: urlstatsConstants.URL_STAT_REQUEST, id}
     }
 
-    function success(id) {
-        return {type: urlstatsConstants.URL_STAT_SUCCESS, id}
+    function success(response) {
+        return {type: urlstatsConstants.URL_STAT_SUCCESS, response}
     }
 
     function failure(id, error) {

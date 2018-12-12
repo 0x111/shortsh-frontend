@@ -9,15 +9,26 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import rootReducer from './_reducers';
 import * as serviceWorker from './serviceWorker';
+import thunk from 'redux-thunk';
+import { createLogger } from 'redux-logger';
 
 const history = createBrowserHistory();
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const middlewares = [routerMiddleware(history), thunk];
+
+if (process.env.NODE_ENV === `development`) {
+    const loggerMiddleware = createLogger();
+
+    middlewares.push(loggerMiddleware);
+}
+
 const store = createStore(
     rootReducer(history),
     composeEnhancer(
         applyMiddleware(
-            routerMiddleware(history),
+            ...middlewares
         ),
     ),
 );
