@@ -24,3 +24,5 @@ This project can be downloaded, built and then hosted basically anywhere. These 
 - Run `yarn install`
 - Then run `yarn build`
 - Host the contents of build folder anywhere
+
+Attention: This is just the frontend part, for the whole to work, you need to setup the [shortsh-backend](https://github.com/0x111/shortsh-backend) and also the [shortsh-redirector](https://github.com/0x111/shortsh-redirector) app. You can host the backend and redirector separately, but also on the same host. I recommend using a simplistic setup with nginx reverse proxy, to host the backend and redirector on different ports and virtually add more short domains further.
