@@ -8,10 +8,6 @@ import {Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis} from "recha
 
 
 class Statistics extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         this.props.dispatch(urlStatsAction.getByID(this.props.match.params.shortid));
     }

@@ -1,6 +1,5 @@
 import React from 'react';
 import {Button, Col, Container, Form, Input, InputGroup, InputGroupAddon, Row} from "reactstrap";
-import ShortShNavbar from "./ShortShNavbar";
 import './Index.css';
 import config from '../_config/config';
 import ClipboardJS from 'clipboard';
