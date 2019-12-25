@@ -1,5 +1,9 @@
 {
   "api": {
     "url": "http://localhost:1323"
+  },
+  "site": {
+    "name": "short.sh",
+    "email": "admin@short.sh"
   }
 }
